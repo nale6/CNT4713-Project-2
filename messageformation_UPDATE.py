@@ -176,16 +176,20 @@ def displayResponse(ipList, nsList, domainList, header, currentIP):
     while(i < (answerCount)):
         print("\tName: " + domainList[i] + "\tIP: " + ipList[i])
         i = i + 1
-        
+
+    i = 0
     #iterate through each authority record and print them in a list
     print("Authority Section:")
     while(i < (authorityCount)):
         print("\tName: " + domainList[i] + "\tName Server: " + nsList[i])
+        i = i + 1
 
+    i = 0
     #iterate through each additional information record and print them in a list
     #print("Additional Information Section:")
     while(i < (additionalCount)):
         print("\tName: " + nsList[i] + "\tIP: " + ipList[i])
+        i = i + 1
         
     return
 
